@@ -2,18 +2,18 @@
 
 ## Steps to containerize an angular application.
 
-## Create new project/application
+## 1. Create new project/application
 
 ```ng new AngularDocker```
 
 ![Alt desc](https://github.com/nj11/AngularDocker/blob/master/screenshots/screenshot1.png)
 
 
-## Make sure project runs successfully
+## 2.Make sure project runs successfully locally
 
 ```ng serve```
 
-#### Steps for containerization of angular application.  
+#### 3.Steps for containerization of angular application.  
 
 ![Alt desc](https://github.com/nj11/AngularDocker/blob/master/screenshots/screenshot2.png)
 
