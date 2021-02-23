@@ -1,27 +1,50 @@
 # AngularDocker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+## Steps to containerize an angular application.
 
-## Development server
+## Create new project/application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```ng new AngularDocker```
 
-## Code scaffolding
+## Make sure project runs successfully
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```ng serve```
 
-## Build
+#### Steps for containerization of service.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+##### Reference for docker multi stage builds - https://docs.docker.com/develop/develop-images/multistage-build/      
+        
+        1.Run docker desktop
 
-## Running unit tests
+        2.Create Dockerfile for project under root directory.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+        3.Login to docker using ```docker login ``` command
 
-## Running end-to-end tests
+        4.Docker delete images (if needed) from powershell
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+         ```$images = docker images -a -q
+            foreach ($image in $images) { docker image rm $image -f }```
 
-## Further help
+         ```docker build -t <dockerusername>/angulardocker .```
+        
+        5 Run ```docker images``` to make sure image was created.
+         
+          REPOSITORY                    TAG                 IMAGE ID            CREATED              SIZE
+          natashajuneja/angulardocker   latest              208415c0d413        9 seconds ago        34.5MB
+          node                          12.16.1-alpine      f77abbe89ac1        11 months ago        88.1MB
+          nginx                         1.15.8-alpine       b411e34b4606        2 years ago          16.1MB
+          
+               
+        6.  
+            ```docker run  -p 4200:80   <dockerusenname>/angulardocker``` --will run on localhost:4200
+                 
+        7.Check running containers.
+        ```docker ps```
+        
+        7.Stop all running containers.
+        ```docker rm -f $(docker ps -a -q)```
+                        
+       5.Run docker push command with the tag name being like username/repository name
+       
+       ```docker push <dockerusername>/angulardocker```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

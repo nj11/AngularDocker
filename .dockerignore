@@ -1,0 +1,7 @@
+#When COPY . . command execute it will copy all the files
+#in the host directory to the container working directory.
+#if we want to ignore some folder like .git or node_modules
+#we can define these folders in .dockerignore file.
+
+.git
+node_modules
