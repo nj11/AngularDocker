@@ -10,7 +10,7 @@
 
 ```ng serve```
 
-#### Steps for containerization of service.  
+#### Steps for containerization of angular application.  
 
 ##### Reference for docker multi stage builds - https://docs.docker.com/develop/develop-images/multistage-build/      
         
