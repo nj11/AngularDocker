@@ -7,13 +7,15 @@
 ```ng new AngularDocker```
 
 ![Alt desc](https://github.com/nj11/AngularDocker/blob/master/screenshots/screenshot1.png)
-![Alt desc](https://github.com/nj11/AngularDocker/blob/master/screenshots/screenshot2.png)
+
 
 ## Make sure project runs successfully
 
 ```ng serve```
 
 #### Steps for containerization of angular application.  
+
+![Alt desc](https://github.com/nj11/AngularDocker/blob/master/screenshots/screenshot2.png)
 
 ##### Reference for docker multi stage builds - https://docs.docker.com/develop/develop-images/multistage-build/      
         
@@ -41,8 +43,7 @@
         6.  
             ```docker run  -p 4200:80   <dockerusenname>/angulardocker``` --will run on localhost:4200
             
-            ![Alt desc](https://github.com/nj11/AngularDocker/blob/master/screenshots/screenshot2.png)
-                 
+                           
         7.Check running containers.
         ```docker ps```
         
