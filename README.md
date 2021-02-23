@@ -7,6 +7,7 @@
 ```ng new AngularDocker```
 
 ![Alt desc](https://github.com/nj11/AngularDocker/blob/master/screenshots/screenshot1.png)
+![Alt desc](https://github.com/nj11/AngularDocker/blob/master/screenshots/screenshot2.png)
 
 ## Make sure project runs successfully
 
